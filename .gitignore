@@ -1,0 +1,25 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build artefacts (not used in this project, but safe defaults)
+node_modules/
+dist/
+build/
+.cache/
+
+# Local-only files
+uploads/
+scraps/
+.review-manifest.json
+
+# Generated exports — don't commit, rebuild on demand
+*.pptx
+"Arletis Bueno.html"

@@ -1,0 +1,32 @@
+# DigitalOcean App Platform spec
+# This file tells DO how to deploy the site. If you'd rather configure
+# everything through the DO web UI, you can delete this file — DO will
+# auto-detect a static site from your repo. But having it here means
+# zero clicking and a reproducible deploy.
+
+name: arletis-bueno
+region: nyc
+
+static_sites:
+  - name: web
+    # Tells DO to pull from your GitHub repo. Update <YOUR-GH-USERNAME>/<REPO-NAME>
+    # before pushing this file, or just configure source through the UI.
+    github:
+      repo: YOUR-GH-USERNAME/arletis-bueno
+      branch: main
+      deploy_on_push: true
+
+    # Static site — no build step needed. Files are served straight from repo root.
+    source_dir: /
+    output_dir: /
+
+    # Custom domain — add this in the DO UI after first deploy, then
+    # update DNS at your domain registrar with the records DO shows you.
+    # domains:
+    #   - domain: arletisbueno.com
+    #     type: PRIMARY
+    #   - domain: www.arletisbueno.com
+    #     type: ALIAS
+
+    # Simple SPA fallback so deep links like /#planes work.
+    catchall_document: index.html

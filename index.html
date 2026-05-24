@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arletis Bueno — Nutricionista &amp; Entrenadora Personal</title>
+<meta name="description" content="Un camino hacia una vida saludable. Planes personalizados de nutrición y entrenamiento con Arletis Bueno." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/png" href="assets/logo-isotipo.png" />
+
+<!-- Code-referenced resources, lifted for the standalone bundler -->
+<meta name="ext-resource-dependency" content="assets/logo-wordmark.png" data-resource-id="logoWordmark" />
+<meta name="ext-resource-dependency" content="assets/logo-wordmark-white.png" data-resource-id="logoWordmarkWhite" />
+<meta name="ext-resource-dependency" content="assets/arletis-strawberries.jpg" data-resource-id="photoStrawberries" />
+<meta name="ext-resource-dependency" content="assets/arletis-elegant.jpg" data-resource-id="photoElegant" />
+<meta name="ext-resource-dependency" content="assets/arletis-charm.jpg" data-resource-id="photoCharm" />
+<meta name="ext-resource-dependency" content="assets/arletis-mat-sitting.jpg" data-resource-id="photoMat" />
+<meta name="ext-resource-dependency" content="assets/arletis-pedestal.jpg" data-resource-id="photoPedestal" />
+
+<template id="__bundler_thumbnail" data-bg-color="#faf7f0">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#faf7f0"/>
+    <g transform="translate(600 380)">
+      <circle cx="0" cy="0" r="180" fill="#d2de32"/>
+      <text x="0" y="32" text-anchor="middle" font-family="Georgia, serif" font-size="180" font-style="italic" fill="#1f2410">AB</text>
+    </g>
+    <text x="600" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#1f2410">Arletis Bueno</text>
+    <text x="600" y="710" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="6" fill="#6b6f58">NUTRITIONIST · PERSONAL TRAINER</text>
+  </svg>
+</template>
+
+<style>
+  /* Responsive collapses */
+  @media (max-width: 1024px) {
+    .ab-plans-full { grid-template-columns: 1fr !important; }
+    .ab-plans-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 820px) {
+    .ab-about-grid, .ab-about-hero, .ab-about-body, .ab-creds-grid,
+    .ab-contact-grid, .ab-test-head, .ab-faq-grid, .ab-cta-block {
+      grid-template-columns: 1fr !important;
+    }
+    .ab-cta-block { text-align: left !important; }
+    .ab-plans-grid { grid-template-columns: 1fr !important; }
+    .ab-image-strip { grid-template-columns: 1fr 1fr !important; }
+    .ab-image-strip > :nth-child(3) { display: none; }
+  }
+  @media (max-width: 760px) {
+    .ab-form-row { grid-template-columns: 1fr !important; }
+    .ab-stats { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (max-width: 720px) {
+    /* Hero on home: stack */
+    main > section:first-child > .ab-container { grid-template-columns: 1fr !important; }
+    .ab-header__brand img { height: 40px !important; }
+  }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="content.js" data-presets="env,react"></script>
+  <script type="text/babel" src="components.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="page-home.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="page-others.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="tweaks-panel.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="app.jsx" data-presets="env,react"></script>
+</body>
+</html>
