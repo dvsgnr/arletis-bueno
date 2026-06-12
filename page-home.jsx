@@ -120,7 +120,7 @@ function HomePage({ lang, setRoute }) {
       <Marquee
         items={lang === "es"
           ? ["Nutrición personalizada", "Entrenamiento funcional", "Hábitos sostenibles", "Cocina real"]
-          : ["Personalised nutrition", "Functional training", "Sustainable habits", "Real food"]}
+          : ["Personalised Nutrition", "Functional Training", "Sustainable Habits", "Real Food"]}
         lang={lang}
       />
 
